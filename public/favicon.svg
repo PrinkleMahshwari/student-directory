@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <!-- Soft Gradient Rounded Square Background -->
+  <rect x="1" y="1" width="14" height="14" rx="3.5" fill="#4f46e5" />
+  <rect x="1.5" y="1.5" width="13" height="13" rx="3" fill="#312e81" opacity="0.8" />
+  
+  <!-- Outer Graphic Accents matching the Inner Icon Symbol Structure -->
+  <path fill="#22d3ee" d="M11.5 3.5H6.5v2h3v1.5H6.5v2h5v-2h-3v-1.5h3z" />
+  <path fill="#ffffff" d="M4.5 3.5h1.5v7H4.5z" />
+  <rect x="4.5" y="11.5" width="7" height="1.5" fill="#ffffff" />
+</svg>
