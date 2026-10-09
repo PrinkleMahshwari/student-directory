@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.css"; 
 import Navbar from "./components/Navbar";
 import Breadcrumb from "./components/Breadcrumb";
 import StudentCard from "./components/StudentCard";
@@ -15,33 +15,36 @@ const students = [
 
 export default function App() {
   return (
-    <>
+    <div className="min-vh-100 d-flex flex-column bg-white">
+
       <Navbar />
 
-      <div className="container">
+      <div className="container my-3 flex-grow-1" style={{ maxWidth: "1064px" }}>
         <Breadcrumb />
 
-        <div className="d-flex justify-content-between align-items-center border-bottom pb-2 mb-3">
-          <h1 className="h2 m-0">Page Header</h1>
-          <button className="btn btn-navy">Add New Student</button>
+        <div className="d-flex justify-content-between align-items-center mb-4">
+          <h1 className="fs-2 text-dark m-0 fw-normal">Page Header</h1>
+          <button className="btn btn-navy-flat px-3 py-2 rounded-1">
+            Add New Student
+          </button>
         </div>
 
-        <div
-          className="row justify-content-center"
-          style={{ "--bs-gutter-x": "1.25rem", "--bs-gutter-y": "1.25rem" }}
-        >
+        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 justify-content-center mb-4">
           {students.map((s) => (
-            <div className="col-auto" key={s.id}>
+            <div className="col d-flex justify-content-center" key={s.id}>
               <StudentCard {...s} />
             </div>
           ))}
         </div>
 
-        <AppPagination />
+        <div className="d-flex justify-content-center mb-4">
+          <AppPagination />
+        </div>
+
         <Alert message="Student records have been successfully updated." />
       </div>
 
       <Footer />
-    </>
+    </div>
   );
 }

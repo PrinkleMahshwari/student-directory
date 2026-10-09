@@ -1,88 +1,20 @@
-.container {
-  max-width: 1064px;
+.student-card-item {
+    transition: border-color 0.15s ease-in-out, background-color 0.15s ease-in-out !important;
+}       
+       
+.student-card-item:hover {
+    border-color: #0d6efd !important; 
+    background-color: #f8f9fa !important;
+
 }
 
-.scrollable-nav-links {
-  overflow-x: auto;
-  white-space: nowrap;
-  scrollbar-width: none; 
-  -ms-overflow-style: none; 
-  padding-right: 15px; 
+.btn-navy-flat {
+    background-color: #15316f !important;
+    border-color: #15316f !important;
+    color: #ffffff !important;
 }
-
-.scrollable-nav-links::-webkit-scrollbar {
-  display: none;
-}
-
-.navbar {
-  overflow: hidden;
-}
-
-.navbar .nav-link {
-  color: #212529;
-}
-
-.search-box {
-  position: relative;
-  width: 185px;
-}
-
-.search-box svg {
-  position: absolute;
-  right: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #444;
-  pointer-events: none; 
-}
-
-.crumb-dark {
-  background: #2b3035;
-  border-radius: 0.375rem;
-  padding: 10px 19px;
-  --bs-breadcrumb-divider-color: #adb5bd;
-}
-
-.crumb-dark .breadcrumb-item,
-.crumb-dark .breadcrumb-item a {
-  color: #dee2e6;
-  text-decoration: none;
-}
-
-.crumb-dark .breadcrumb-item.active {
-  color: #fff;
-  font-weight: 700;
-}
-
-.btn-navy {
-  background-color: #15316f;
-  border-color: #15316f;
-  color: #fff;
-}
-
-.student-card {
-  width: 220px;
-}
-
-.avatar-box {
-  background: #c8c8d0;
-  height: 102px;
-  display: flex;
-  justify-content: center;
-}
-
-.page-item.disabled .page-link {
-  background-color: #fff;
-}
-
-.alert-info-custom {
-  background-color: #cfe5ec;
-  border: 1px solid #bddbe4;
-  color: #0c5460;
-  padding: 12px 20px;
-  margin: 0 10px 16px 27px;
-}
-
-.footer-inner {
-  margin: 0 10px 0 27px;
+        
+.btn-navy-flat:hover {
+    background-color: #0f2452 !important;
+    border-color: #0f2452 !important;
 }
