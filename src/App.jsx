@@ -7,10 +7,10 @@ import Alert from "./components/Alert";
 import Footer from "./components/Footer";
 
 const students = [
-  { id: 101, name: "Jane Doe", major: "Computer Science", year: 2, gpa: 3.8, tag: ".btn-outline-primary" },
-  { id: 102, name: "Mary Doe", major: "Computer Science", year: 2, gpa: 3.8, tag: ".btn-outline-danger" },
-  { id: 103, name: "Gant Doe", major: "Computer Science", year: 2, gpa: 3.8, tag: ".btn-outline-danger" },
-  { id: 104, name: "Amm Doe", major: "Computer Science", year: 2, gpa: 3.8, tag: ".btn-outline-danger" },
+  { id: 101, name: "Jane Doe", major: "Computer Science", year: 2, gpa: 3.8, tag: ".btn-outline-primary", email: "jane101@gamil.com", phone: "123-456-7890" },
+  { id: 102, name: "Mary Doe", major: "Computer Science", year: 2, gpa: 3.8, tag: ".btn-outline-danger", email: "mary102@gamil.com", phone: "123-456-7891" },
+  { id: 103, name: "Gant Doe", major: "Computer Science", year: 2, gpa: 3.8, tag: ".btn-outline-danger", email: "gant103@gamil.com", phone: "123-456-7892" },
+  { id: 104, name: "Amm Doe", major: "Computer Science", year: 2, gpa: 3.8, tag: ".btn-outline-danger", email: "amm104@gamil.com", phone: "123-456-7893" },
 ];
 
 export default function App() {

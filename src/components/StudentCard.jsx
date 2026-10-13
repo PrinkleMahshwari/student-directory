@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 function Avatar() {
   return (
     <div className="d-flex justify-content-center align-items-end w-100" style={{ background: "#c8c8d0", height: "102px" }}>
@@ -9,8 +11,15 @@ function Avatar() {
   );
 }
 
-export default function StudentCard({ id, name, major, year, gpa, tag }) {
+export default function StudentCard({ id, name, major, year, gpa, tag, email, phone }) {
   const isPrimary = tag.includes("primary");
+
+  const [views, setViews] = useState(0); 
+  const [showDetails, setShowDetails] = useState(false);
+  
+  function handleViews() {
+    setViews(views + 1);
+  }
 
   return (
     <div className="card border student-card-item w-100" style={{ width: "220px", maxWidth: "220px" }}>
@@ -25,18 +34,43 @@ export default function StudentCard({ id, name, major, year, gpa, tag }) {
         </p>
         
         <div className="d-flex gap-2 mb-2">
-          <button className="btn btn-outline-primary btn-sm flex-grow-1 py-1 text-nowrap">View Profile</button>
+          {/* Combined 'View Profile' click logic here to increment views */}
+          <button 
+            onClick={handleViews} 
+            className="btn btn-outline-primary btn-sm flex-grow-1 py-1 text-nowrap"
+          >
+            View Profile
+          </button>
           <button className="btn btn-outline-danger btn-sm flex-grow-1 py-1 text-nowrap">Delete</button>
         </div>
         
         <button 
-          className={`btn btn-sm w-100 py-1 font-monospace disabled text-center ${
+          className={`btn btn-sm w-100 py-1 font-monospace disabled text-center mb-3 ${
             isPrimary ? 'btn-outline-primary' : 'btn-outline-danger'
           }`} 
           style={{ fontSize: '0.78rem' }}
         >
           {tag}
         </button>
+
+        <div className="d-flex justify-content-between align-items-center mb-3 small text-muted">
+          <span>Profile Views:</span>
+          <span className="badge bg-secondary rounded-pill">{views}</span>
+        </div>
+
+        <button 
+          onClick={() => setShowDetails(!showDetails)} 
+          className="btn btn-sm btn-light w-100 border text-secondary mb-2"
+        >
+          {showDetails ? "Hide Details" : "Show Details"}
+        </button>
+
+        {showDetails && (
+          <div className="p-2 bg-light border rounded small text-dark mt-2">
+            <p className="mb-1 text-truncate"><strong>Email:</strong> {email}</p>
+            <p className="mb-0 text-truncate"><strong>Phone:</strong> {phone}</p>
+          </div>
+        )}
       </div>
     </div>
   );
