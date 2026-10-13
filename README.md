@@ -1,10 +1,16 @@
 # Student Directory
+![Course](https://img.shields.io/badge/Course-SCD%20(LAB)-blue)
+![Semester](https://img.shields.io/badge/Semester-5C-orange)
+![Institute](https://img.shields.io/badge/Institute-SZABIST%20Karachi-red)
+![Tech](https://img.shields.io/badge/Frontend-React-61DAFB?logo=react&logoColor=black)
+![Tech](https://img.shields.io/badge/Framework-Bootstrap%205-7952B3?logo=bootstrap&logoColor=white)
 
-A Student Directory UI built with **React** (components and props) and **Bootstrap 5**, cloned from a provided reference design.
+A Student Directory UI built with **React** (components, props, and hooks (use effect)) and **Bootstrap 5**, cloned from a provided reference design.
 
 ## 📸 Screenshot
 
-![Student Directory UI](screenshot.png?v=1)
+![Student Directory UI](screenshot1.png)
+![Student Directory UI](screenshot2.png)
 
 ## ✨ Features
 
@@ -15,6 +21,12 @@ A Student Directory UI built with **React** (components and props) and **Bootstr
 * **Pagination:** Interactive bottom pagination for switching between data pages.
 * **Alert Message:** A dismissible alert banner at the top of the interface.
 * **Footer:** Contains quick navigation links and essential contact information.
+
+## 💡 Core Concepts Applied
+
+* **Components:** Modularized layout building blocks broken down into isolated, reusable pieces of code (`StudentCard`, `AppNavbar`, etc.).
+* **Props:** Facilitated dynamic text and state injection across student templates to scale content cleanly.
+* **Hooks (useEffect):** Utilized to monitor state life-cycles, handle component side-effects, or synchronize API/mock data accurately on mount.
 
 ## 🛠️ Tech Stack
 
