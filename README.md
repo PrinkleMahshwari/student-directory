@@ -4,7 +4,7 @@ A Student Directory UI built with **React** (components and props) and **Bootstr
 
 ## 📸 Screenshot
 
-![Student Directory UI](screenshot.png)
+![Student Directory UI](screenshot.png?v=1)
 
 ## ✨ Features
 
