@@ -1,15 +1,18 @@
+import { Link } from "react-router-dom";
 export default function Footer() {
   return (
-    <footer className="bg-dark text-white pt-4 pb-3 mt-auto w-100">
+    <footer className="bottom bg-dark text-white pt-4 pb-3 mt-3 w-100">
       <div className="container" style={{ maxWidth: "1064px" }}>
         <div className="row px-2">
           <div className="col-6">
             <h5 className="fs-6 fw-bold text-white mb-2">Links</h5>
             <ul className="list-unstyled mb-0">
-              {["Home", "Computer Science", "Courses", "Reports"].map((l) => (
+              {["Dashboard", "Students", "Courses", "Reports"].map((l) => (
                 <li key={l} className="mb-1">
-                  <a href="#" className="text-white text-decoration-none small" style={{ opacity: 0.85 }}>{l}</a>
-                </li>
+                  <Link className="nav-link px-2 text-secondary" to={`/${l.toLowerCase()}`}>
+                  {l}
+                </Link>
+              </li>
               ))}
             </ul>
           </div>
