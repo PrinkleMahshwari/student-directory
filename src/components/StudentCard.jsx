@@ -14,9 +14,9 @@ function Avatar() {
 export default function StudentCard({ id, name, major, year, gpa, tag, email, phone }) {
   const isPrimary = tag.includes("primary");
 
-  const [views, setViews] = useState(0); 
+  const [views, setViews] = useState(0);
   const [showDetails, setShowDetails] = useState(false);
-  
+
   function handleViews() {
     setViews(views + 1);
   }
@@ -32,22 +32,21 @@ export default function StudentCard({ id, name, major, year, gpa, tag, email, ph
           Year: {year}<br />
           GPA: {gpa}
         </p>
-        
+
         <div className="d-flex gap-2 mb-2">
           {/* Combined 'View Profile' click logic here to increment views */}
-          <button 
-            onClick={handleViews} 
+          <button
+            onClick={handleViews}
             className="btn btn-outline-primary btn-sm flex-grow-1 py-1 text-nowrap"
           >
             View Profile
           </button>
           <button className="btn btn-outline-danger btn-sm flex-grow-1 py-1 text-nowrap">Delete</button>
         </div>
-        
-        <button 
-          className={`btn btn-sm w-100 py-1 font-monospace disabled text-center mb-3 ${
-            isPrimary ? 'btn-outline-primary' : 'btn-outline-danger'
-          }`} 
+
+        <button
+          className={`btn btn-sm w-100 py-1 font-monospace disabled text-center mb-3 ${isPrimary ? 'btn-outline-primary' : 'btn-outline-danger'
+            }`}
           style={{ fontSize: '0.78rem' }}
         >
           {tag}
@@ -58,8 +57,8 @@ export default function StudentCard({ id, name, major, year, gpa, tag, email, ph
           <span className="badge bg-secondary rounded-pill">{views}</span>
         </div>
 
-        <button 
-          onClick={() => setShowDetails(!showDetails)} 
+        <button
+          onClick={() => setShowDetails(!showDetails)}
           className="btn btn-sm btn-light w-100 border text-secondary mb-2"
         >
           {showDetails ? "Hide Details" : "Show Details"}
