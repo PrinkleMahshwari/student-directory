@@ -1,8 +1,8 @@
 const students = [
     { id: 101, name: "Jane Doe", major: "Computer Science", year: 2, gpa: 3.8, email: "jane101@gamil.com", phone: "123-456-7890" },
-    { id: 102, name: "Mary Doe", major: "Computer Science", year: 2, gpa: 3.8, email: "mary102@gamil.com", phone: "123-456-7891" },
-    { id: 103, name: "Gant Doe", major: "Computer Science", year: 2, gpa: 3.8, email: "gant103@gamil.com", phone: "123-456-7892" },
-    { id: 104, name: "Amm Doe", major: "Computer Science", year: 2, gpa: 3.8, email: "amm104@gamil.com", phone: "123-456-7893" },
+    { id: 102, name: "Mary Doe", major: "Computer Science", year: 2, gpa: 4.0, email: "mary102@gamil.com", phone: "123-456-7891" },
+    { id: 103, name: "Gant Doe", major: "Computer Science", year: 2, gpa: 3.2, email: "gant103@gamil.com", phone: "123-456-7892" },
+    { id: 104, name: "Amm Doe", major: "Computer Science", year: 2, gpa: 1.1, email: "amm104@gamil.com", phone: "123-456-7893" },
 ];
 
 export default function Students() {
