@@ -8,3 +8,9 @@ export async function getProducts () {
     const data = await response.json()
     return data.products
 }
+
+export const getProductById = async (id) => {
+  const response = await fetch (`${url}/${id}`);
+  if (!response.ok) throw new Error('Failed to fetch product details');
+  return await response.json();
+};

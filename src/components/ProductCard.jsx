@@ -1,6 +1,7 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-export default function ProductCard({ title, price, discountPercentage, rating, thumbnail }) {
+export default function ProductCard({ id, title, price, discountPercentage, rating, thumbnail }) {
   const [hovered, setHovered] = useState(false);
 
   return (
@@ -11,7 +12,6 @@ export default function ProductCard({ title, price, discountPercentage, rating, 
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      {/* Thumbnail Wrapper with Discount Badge at Top-Right */}
       <div className={`position-relative p-3 ${hovered ? 'bg-primary-subtle' : 'bg-light'}`}>
         <img
           src={thumbnail}
@@ -26,9 +26,7 @@ export default function ProductCard({ title, price, discountPercentage, rating, 
         )}
       </div>
 
-      {/* Card Body */}
       <div className="card-body d-flex flex-column justify-content-between">
-        {/* Row 1: Title (Left) & Price (Right) */}
         <div className="d-flex justify-content-between align-items-start gap-2 mb-3">
           <h6 className={`card-title fw-semibold mb-0 ${hovered ? 'text-primary' : ''}`}>
             {title}
@@ -36,14 +34,16 @@ export default function ProductCard({ title, price, discountPercentage, rating, 
           <span className="fw-bold text-primary text-nowrap">${price}</span>
         </div>
 
-        {/* Row 2: Rating (Left) & View Button (Right) */}
         <div className="d-flex justify-content-between align-items-center pt-2 border-top">
           <span className="badge bg-warning-subtle text-dark border border-warning-subtle">
             ⭐ {rating}
           </span>
-          <button className={`btn btn-sm px-3 ${hovered ? 'btn-primary' : 'btn-outline-primary'}`}>
+          <Link
+            to={`/product/${id}`}
+            className={`btn btn-sm px-3 ${hovered ? 'btn-primary' : 'btn-outline-primary'}`}
+          >
             View
-          </button>
+          </Link>
         </div>
       </div>
     </div>

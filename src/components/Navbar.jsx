@@ -1,12 +1,14 @@
+import { Link } from 'react-router-dom';
+
 export default function Navbar() {
-    return (
-        <div>
-            <nav className="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
-            <div className="container-fluid d-flex justify-content-between px-5 py-2">
-                <span className="navbar-brand fw-bold">Product Listing App</span>
-                <span className="navbar-text fw-bold">REACT API Integration</span>
-            </div>
-        </nav>
-        </div>
-    )
+  return (
+    <nav className="navbar navbar-dark bg-primary px-4">
+      <Link to="/" className="navbar-brand fw-bold mb-0">
+        Product Listing App
+      </Link>
+      <span className="navbar-text text-white-50">
+        REACT API Integration
+      </span>
+    </nav>
+  );
 }
